@@ -99,7 +99,7 @@ function Header() {
         <div className="wrapper" ref={flag_parallax}>
           <div className="stick"></div>
           <div className="flag">
-            <div class="wave"></div>
+            <div className="wave"></div>
             <div className="left"></div>
             <div className="middle"></div>
             <div className="right"></div>
