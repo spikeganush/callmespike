@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 //css
-import '../Header.css'
+import '../css/Header.css'
 //images import
 import cloud_top_left from '../assets/first_landscape/cloud_top_left.png'
 import cloud_top_right from '../assets/first_landscape/cloud_top_right.png'
@@ -101,7 +101,6 @@ function Header() {
         <div className="wrapper" ref={flag_parallax}>
           <div className="stick"></div>
           <div className="flag">
-            <div className="wave"></div>
             <div className="left"></div>
             <div className="middle"></div>
             <div className="right"></div>
@@ -156,12 +155,12 @@ function Header() {
           moved in Australia end of 2018.
         </p>
         <p>
-          In April 2019 I started my journey in the development world with the
-          beginning of my Bachelor degree in Mobile App development in AIT
+          In April 2019 I've started my journey in the development world with
+          the beginning of my Bachelor degree in Mobile App development in AIT
           (Academy of Information Technology).
         </p>
         <p>
-          2022 I will be graduated and ready to start a new chapter as a
+          In 2022 I will be graduated and ready to start a new chapter as a
           professional developer.
         </p>
       </div>

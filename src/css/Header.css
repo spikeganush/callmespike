@@ -1,12 +1,16 @@
 @font-face {
   font-family: 'Courgette';
-  src: local('Courgette'), url(./fonts/Courgette-Regular.ttf) format('truetype');
+  src: local('Courgette'),
+    url(../fonts/Courgette-Regular.ttf) format('truetype');
+}
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
+  background-color: #f1f1f1;
 }
 
 img {
@@ -14,7 +18,7 @@ img {
 }
 
 .first_landscape_background {
-  background-image: url(./assets/first_landscape/background.png);
+  background-image: url(../assets/first_landscape/background.png);
   height: 100vh;
   width: 100%;
   position: relative;
@@ -158,34 +162,15 @@ img {
   background-color: rgb(224, 5, 5);
 }
 
-.wave {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(
-    128deg,
-    rgba(89, 72, 21, 0) 39%,
-    rgba(250, 245, 245, 0.8474025974025974) 46%,
-    rgba(89, 72, 21, 0) 53%
-  );
-  animation-name: wavy;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-@keyframes wavy {
-  0% {
-    background-position: -400px 0px, -400px 0px, -400px 0px, -400px 0px;
-  }
-  100% {
-    background-position: 800px 0px, 800px 0px, 800px 0px, 800px 0px;
-  }
-}
-
 .next_content {
   position: relative;
-  background-color: hsl(300, 46%, 18%);
+  background: rgb(67, 25, 67);
+  background: linear-gradient(
+    180deg,
+    rgba(67, 25, 67, 1) 0%,
+    rgba(67, 25, 67, 1) 90%,
+    rgba(247, 153, 76, 1) 100%
+  );
   color: rgb(223, 219, 219);
   font-size: 2em;
   padding: 20px;
