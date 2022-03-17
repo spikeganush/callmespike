@@ -1,13 +1,190 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Courgette';
+  src: local('Courgette'), url(./fonts/Courgette-Regular.ttf) format('truetype');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+}
+
+.first_landscape_background {
+  background-image: url(./assets/first_landscape/background.png);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.plane {
+  position: absolute;
+  width: 200px;
+  top: 300px;
+}
+
+.first_landscape_cloud_top_left {
+  position: absolute;
+  width: 20%;
+  top: 35px;
+  left: 85px;
+}
+
+.first_landscape_cloud_top_right {
+  position: absolute;
+  width: 20%;
+  top: 115px;
+  right: 450px;
+}
+
+.first_landscape_cloud_bottom_left {
+  position: absolute;
+  width: 20%;
+  top: 400px;
+  left: 160px;
+}
+
+.first_landscape_cloud_bottom_right {
+  position: absolute;
+  width: 20%;
+  top: 280px;
+  right: 25px;
+}
+
+.first_landscape_mountain_central {
+  position: absolute;
+  display: block;
+  width: 62%;
+  bottom: 100px;
+  left: 50%;
+  margin-left: -31%;
+}
+
+.first_landscape_mountain_left_and_right {
+  position: absolute;
+  width: 80%;
+  bottom: 55px;
+  right: 125px;
+  z-index: 5;
+}
+
+.first_landscape_three_back {
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  left: 0;
+  z-index: 6;
+}
+
+.first_landscape_three_side {
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  left: 0;
+  z-index: 7;
+}
+
+.first_landscape_grass {
+  position: absolute;
+  width: 100%;
+  bottom: -70px;
+  left: 0;
+  z-index: 8;
+}
+
+.first_landscape_three_first {
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  left: 0;
+  z-index: 9;
+}
+
+.next_content {
+  position: relative;
+  background-color: hsl(300, 46%, 18%);
+  height: 100vh;
+}
+
+.title {
+  z-index: 4;
+  position: relative;
+  color: #fff;
+  text-shadow: 0 0 5px black;
+  margin-bottom: -5px;
+  font-family: 'Courgette', cursive;
+  font-size: 6em;
+}
+
+.wrapper {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  margin-left: -1.3%;
+}
+
+.stick {
+  height: 100px;
+  width: 2px;
+  background: black;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.flag {
+  display: flex;
+  width: 60px;
+  height: 40px;
+  box-shadow: 0px 0px 20px 1px #989;
+  background-color: transparent;
+  position: relative;
+}
+
+.left {
+  width: 20px;
+  background-color: #3347ff;
+}
+
+.middle {
+  width: 20px;
+  background-color: white;
+}
+
+.right {
+  width: 20px;
+  background-color: rgb(224, 5, 5);
+}
+
+.wave {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    128deg,
+    rgba(89, 72, 21, 0) 39%,
+    rgba(250, 245, 245, 0.8474025974025974) 46%,
+    rgba(89, 72, 21, 0) 53%
+  );
+  animation-name: wavy;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes wavy {
+  0% {
+    background-position: -400px 0px, -400px 0px, -400px 0px, -400px 0px;
+  }
+  100% {
+    background-position: 800px 0px, 800px 0px, 800px 0px, 800px 0px;
+  }
 }
