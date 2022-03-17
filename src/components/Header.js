@@ -1,4 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
+//css
+import '../Header.css'
 //images import
 import cloud_top_left from '../assets/first_landscape/cloud_top_left.png'
 import cloud_top_right from '../assets/first_landscape/cloud_top_right.png'
@@ -149,7 +151,19 @@ function Header() {
         />
       </div>
       <div className="next_content" ref={second_section}>
-        A bit of nothing
+        <p>
+          As you can see my name is Florian Jourdain. Born in France in 1984 and
+          moved in Australia end of 2018.
+        </p>
+        <p>
+          In April 2019 I started my journey in the development world with the
+          beginning of my Bachelor degree in Mobile App development in AIT
+          (Academy of Information Technology).
+        </p>
+        <p>
+          2022 I will be graduated and ready to start a new chapter as a
+          professional developer.
+        </p>
       </div>
     </>
   )

@@ -108,12 +108,6 @@ img {
   z-index: 9;
 }
 
-.next_content {
-  position: relative;
-  background-color: hsl(300, 46%, 18%);
-  height: 100vh;
-}
-
 .title {
   z-index: 4;
   position: relative;
@@ -175,7 +169,7 @@ img {
     rgba(89, 72, 21, 0) 53%
   );
   animation-name: wavy;
-  animation-duration: 10s;
+  animation-duration: 15s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -187,4 +181,20 @@ img {
   100% {
     background-position: 800px 0px, 800px 0px, 800px 0px, 800px 0px;
   }
+}
+
+.next_content {
+  position: relative;
+  background-color: hsl(300, 46%, 18%);
+  color: rgb(223, 219, 219);
+  font-size: 2em;
+  padding: 20px;
+}
+
+.next_content p:first-of-type {
+  margin-top: 0;
+}
+
+p {
+  padding-inline: 250px;
 }
