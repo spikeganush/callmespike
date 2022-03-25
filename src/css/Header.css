@@ -32,7 +32,8 @@ img {
 .plane {
   position: absolute;
   width: 200px;
-  top: 300px;
+  top: 380px;
+  left: 850px;
 }
 
 .first_landscape_cloud_top_left {
@@ -80,7 +81,7 @@ img {
   z-index: 5;
 }
 
-.first_landscape_three_back {
+.first_landscape_tree_back {
   position: absolute;
   width: 100%;
   bottom: -20px;
@@ -88,7 +89,7 @@ img {
   z-index: 6;
 }
 
-.first_landscape_three_side {
+.first_landscape_tree_side {
   position: absolute;
   width: 100%;
   bottom: -20px;
@@ -104,7 +105,7 @@ img {
   z-index: 8;
 }
 
-.first_landscape_three_first {
+.first_landscape_tree_first {
   position: absolute;
   width: 100%;
   bottom: -20px;
@@ -182,4 +183,41 @@ img {
 
 p {
   padding-inline: 250px;
+}
+
+/* Breakpoints */
+/* First breakpoint */
+
+@media screen and (max-width: 1101px) {
+  p {
+    padding-inline: 100px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  p {
+    padding-inline: 50px;
+  }
+  .next_content {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 3em;
+  }
+
+  .first_landscape_tree_first {
+    bottom: 0;
+    width: 200%;
+  }
+
+  p {
+    padding-inline: 50px;
+  }
+
+  .next_content {
+    font-size: 1em;
+  }
 }
