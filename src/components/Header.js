@@ -65,7 +65,7 @@ function Header() {
   useEffect(() => {
     //set the offset of the parallax
     setWindowWidth(window.innerWidth)
-    console.log(windowWidth)
+    // console.log(offset)
 
     //Title parameters
     title_parallax.current.style.transform = `translateY(${offset * 3}px)`
