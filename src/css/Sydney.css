@@ -116,9 +116,9 @@
 
 @media screen and (max-width: 430px) {
   .plane_sydney {
-    width: 200px;
-    top: -440px;
-    right: -460px;
+    width: 100px;
+    top: -105px;
+    right: -1050px;
   }
 
   .sun {
