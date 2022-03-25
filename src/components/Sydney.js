@@ -65,7 +65,6 @@ function Sydney() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [offset])
 
-  console.log(offset)
   return (
     <>
       <div className="sydney">

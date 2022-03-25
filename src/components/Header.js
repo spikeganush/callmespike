@@ -16,6 +16,7 @@ import plane from '../assets/first_landscape/plane.png'
 
 function Header() {
   const [offset, setOffset] = useState(0)
+  const [windowWidth, setWindowWidth] = useState()
   //UseRef to define the object with parallax
   const left_top_cloud_parallax = useRef()
   const right_top_cloud_parallax = useRef()
@@ -29,12 +30,13 @@ function Header() {
   const three_first_parallax = useRef()
   const second_section = useRef()
   const title_parallax = useRef()
-  const title_parallax_2 = useRef()
   const flag_parallax = useRef()
   const plane_parallax = useRef()
 
   useEffect(() => {
     //set the offset of the parallax
+    setWindowWidth(window.innerWidth)
+    console.log(windowWidth)
     //plane parameters
     plane_parallax.current.style.top = 360 + offset * 0.5 + 'px'
     plane_parallax.current.style.left = 850 + offset * 1.5 + 'px'
@@ -48,7 +50,7 @@ function Header() {
     right_bottom_cloud_parallax.current.style.top = 280 - offset * -1 + 'px'
     right_bottom_cloud_parallax.current.style.right = 25 + offset * -0.8 + 'px'
     //Mountain parameters
-    mountain_central_parallax.current.style.bottom = 100 + offset * -1.5 + 'px'
+    mountain_central_parallax.current.style.bottom = 130 + offset * -1.5 + 'px'
     mountain_left_and_right_parallax.current.style.bottom =
       55 + offset * -1 + 'px'
     //Three parameters
@@ -58,8 +60,7 @@ function Header() {
     //Grass parameters
     grass_parallax.current.style.bottom = -70 + offset * -0.7 + 'px'
     //Title parameters
-    title_parallax.current.style.top = offset * 3 + 'px'
-    title_parallax_2.current.style.top = offset * 3 + 'px'
+    title_parallax.current.style.top = -80 + offset * 3 + 'px'
     //flag_parallax
     flag_parallax.current.style.top = 200 + offset * 1.5 + 'px'
 
@@ -115,9 +116,7 @@ function Header() {
         <h1 className="title" ref={title_parallax}>
           Florian Jourdain
         </h1>
-        <h1 className="title" ref={title_parallax_2}>
-          Website
-        </h1>
+
         <img
           src={mountain_left_and_right}
           ref={mountain_left_and_right_parallax}
