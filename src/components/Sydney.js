@@ -1,19 +1,27 @@
 import React, { useRef, useState, useEffect } from 'react'
 import '../css/Sydney.css'
 //images import
-import bridge from '../assets/sydney/bridge.png'
-import city_back from '../assets/sydney/city_back.png'
-import city_first from '../assets/sydney/city_first.png'
-import dune from '../assets/sydney/dune.png'
-import kangourou from '../assets/sydney/kangourou.png'
-import opera from '../assets/sydney/opera.png'
-import palm from '../assets/sydney/palm.png'
-import sun from '../assets/sydney/sun.png'
-import plane from '../assets/sydney/plane.png'
 import ait_logo from '../assets/general/ait_logo.png'
 
 function Sydney() {
   const [offset, setOffset] = useState(0)
+  const [windowWidth, setWindowWidth] = useState()
+  let path
+  if (windowWidth > 820) {
+    path = '../assets/sydney/desktop/'
+  } else {
+    path = '../assets/sydney/mobile/'
+  }
+  //images
+  const bridge = path + 'bridge.png'
+  const city_back = path + 'city_back.png'
+  const city_first = path + 'city_first.png'
+  const dune = path + 'dune.png'
+  const kangourou = path + 'kangourou.png'
+  const opera = path + 'opera.png'
+  const palm = path + 'palm.png'
+  const sun = path + 'sun.png'
+  const plane = path + 'plane.png'
   const sun_parallax = useRef()
   const plane_parallax = useRef()
   const dune_parallax = useRef()
@@ -26,6 +34,26 @@ function Sydney() {
   const ait_logo_parallax = useRef()
   const title_parallax = useRef()
   const title2_parallax = useRef()
+
+  const ParallaxImage = ({
+    image,
+    classInfo,
+    reference,
+    translateX,
+    translateY,
+  }) => {
+    return (
+      <img
+        src={image}
+        className={classInfo}
+        ref={reference}
+        style={{
+          transform: `translateY(${offset * translateY}px)
+           translateX(${offset * translateX}px)`,
+        }}
+      />
+    )
+  }
 
   useEffect(() => {
     //set the offset of the parallax
