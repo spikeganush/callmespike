@@ -1,68 +1,76 @@
 import React, { useEffect, useState, useRef } from 'react'
 //css
 import '../css/Header.css'
+
 //images import
-import cloud_top_left from '../assets/first_landscape/cloud_top_left.png'
-import cloud_top_right from '../assets/first_landscape/cloud_top_right.png'
-import cloud_bottom_left from '../assets/first_landscape/cloud_bottom_left.png'
-import cloud_bottom_right from '../assets/first_landscape/cloud_bottom_right.png'
-import mountain_central from '../assets/first_landscape/mountain_central.png'
-import mountain_left_and_right from '../assets/first_landscape/mountain_left_and_right.png'
-import three_back from '../assets/first_landscape/three_back.png'
-import three_side from '../assets/first_landscape/three_side.png'
-import grass from '../assets/first_landscape/grass.png'
-import three_first from '../assets/first_landscape/three_first.png'
-import plane from '../assets/first_landscape/plane.png'
+// import cloud_top_left from '../assets/first_landscape/cloud_top_left.png'
+// import cloud_top_right from '../assets/first_landscape/cloud_top_right.png'
+// import cloud_bottom_left from '../assets/first_landscape/cloud_bottom_left.png'
+// import cloud_bottom_right from '../assets/first_landscape/cloud_bottom_right.png'
+// import mountain_central from '../assets/first_landscape/mountain_central.png'
+// import mountain_left_and_right from '../assets/first_landscape/mountain_left_and_right.png'
+// import tree_back from '../assets/first_landscape/tree_back.png'
+// import tree_side from '../assets/first_landscape/tree_side.png'
+// import grass from '../assets/first_landscape/grass.png'
+// import tree_first from '../assets/first_landscape/tree_first.png'
+// import plane from '../assets/first_landscape/plane.png'
 
 function Header() {
   const [offset, setOffset] = useState(0)
   const [windowWidth, setWindowWidth] = useState()
-  //UseRef to define the object with parallax
-  const left_top_cloud_parallax = useRef()
-  const right_top_cloud_parallax = useRef()
-  const left_bottom_cloud_parallax = useRef()
-  const right_bottom_cloud_parallax = useRef()
-  const mountain_central_parallax = useRef()
-  const mountain_left_and_right_parallax = useRef()
-  const three_back_parallax = useRef()
-  const three_side_parallax = useRef()
-  const grass_parallax = useRef()
-  const three_first_parallax = useRef()
+  let path
+  if (windowWidth > 820) {
+    path = '../assets/first_landscape/desktop/'
+  } else {
+    path = '../assets/first_landscape/mobile/'
+  }
+
+  //images
+  const cloud_top_left = path + 'cloud_top_left.png'
+  const cloud_top_right = path + 'cloud_top_right.png'
+  const cloud_bottom_left = path + 'cloud_bottom_left.png'
+  const cloud_bottom_right = path + 'cloud_bottom_right.png'
+  const mountain_central = path + 'mountain_central.png'
+  const mountain_left_and_right = path + 'mountain_left_and_right.png'
+  const tree_back = path + 'tree_back.png'
+  const tree_side = path + 'tree_side.png'
+  const grass = path + 'grass.png'
+  const tree_first = path + 'tree_first.png'
+  const plane = path + 'plane.png'
+  //useRef
   const second_section = useRef()
   const title_parallax = useRef()
   const flag_parallax = useRef()
-  const plane_parallax = useRef()
+
+  const ParallaxImage = ({
+    image,
+    classInfo,
+    reference,
+    translateX,
+    translateY,
+  }) => {
+    return (
+      <img
+        src={image}
+        className={classInfo}
+        ref={reference}
+        style={{
+          transform: `translateY(${offset * translateY}px)
+           translateX(${offset * translateX}px)`,
+        }}
+      />
+    )
+  }
 
   useEffect(() => {
     //set the offset of the parallax
     setWindowWidth(window.innerWidth)
-    console.log(windowWidth)
-    //plane parameters
-    plane_parallax.current.style.top = 360 + offset * 0.5 + 'px'
-    plane_parallax.current.style.left = 850 + offset * 1.5 + 'px'
-    //Clouds parameters
-    left_top_cloud_parallax.current.style.top = 35 - offset * -1 + 'px'
-    left_top_cloud_parallax.current.style.left = 85 + offset * -0.8 + 'px'
-    left_bottom_cloud_parallax.current.style.top = 400 - offset * -1 + 'px'
-    left_bottom_cloud_parallax.current.style.left = 160 + offset * -0.8 + 'px'
-    right_top_cloud_parallax.current.style.top = 115 - offset * -1 + 'px'
-    right_top_cloud_parallax.current.style.right = 450 + offset * -0.8 + 'px'
-    right_bottom_cloud_parallax.current.style.top = 280 - offset * -1 + 'px'
-    right_bottom_cloud_parallax.current.style.right = 25 + offset * -0.8 + 'px'
-    //Mountain parameters
-    mountain_central_parallax.current.style.bottom = 130 + offset * -1.5 + 'px'
-    mountain_left_and_right_parallax.current.style.bottom =
-      55 + offset * -1 + 'px'
-    //Three parameters
-    three_back_parallax.current.style.bottom = -20 + offset * -0.8 + 'px'
-    three_side_parallax.current.style.bottom = -20 + offset * -0.5 + 'px'
-    three_first_parallax.current.style.bottom = -20 + offset * -0.3 + 'px'
-    //Grass parameters
-    grass_parallax.current.style.bottom = -70 + offset * -0.7 + 'px'
+    // console.log(offset)
+
     //Title parameters
-    title_parallax.current.style.top = -80 + offset * 3 + 'px'
+    title_parallax.current.style.transform = `translateY(${offset * 3}px)`
     //flag_parallax
-    flag_parallax.current.style.top = 200 + offset * 1.5 + 'px'
+    flag_parallax.current.style.transform = `translateY(${offset * 1.5}px)`
 
     const onScroll = () => setOffset(window.pageYOffset)
     // clean up code
@@ -74,30 +82,35 @@ function Header() {
   return (
     <>
       <div className="first_landscape_background">
-        <img src={plane} ref={plane_parallax} alt="plane" className="plane" />
-        <img
-          src={cloud_top_left}
-          ref={left_top_cloud_parallax}
-          className="first_landscape_cloud_top_left"
-          alt="cloud"
+        <ParallaxImage
+          classInfo="plane"
+          image={plane}
+          translateY={0.5}
+          translateX={1.5}
         />
-        <img
-          src={cloud_top_right}
-          ref={right_top_cloud_parallax}
-          className="first_landscape_cloud_top_right"
-          alt="cloud"
+        <ParallaxImage
+          classInfo="first_landscape_cloud_top_left"
+          image={cloud_top_left}
+          translateY={1}
+          translateX={-0.8}
         />
-        <img
-          src={cloud_bottom_left}
-          ref={left_bottom_cloud_parallax}
-          className="first_landscape_cloud_bottom_left"
-          alt="cloud"
+        <ParallaxImage
+          classInfo="first_landscape_cloud_top_right"
+          image={cloud_top_right}
+          translateY={1}
+          translateX={0.8}
         />
-        <img
-          src={cloud_bottom_right}
-          ref={right_bottom_cloud_parallax}
-          className="first_landscape_cloud_bottom_right"
-          alt="cloud"
+        <ParallaxImage
+          classInfo="first_landscape_cloud_bottom_left"
+          image={cloud_bottom_left}
+          translateY={1}
+          translateX={-0.8}
+        />
+        <ParallaxImage
+          classInfo="first_landscape_cloud_bottom_right"
+          image={cloud_bottom_right}
+          translateY={1}
+          translateX={0.8}
         />
         <div className="wrapper" ref={flag_parallax}>
           <div className="stick"></div>
@@ -107,45 +120,46 @@ function Header() {
             <div className="right"></div>
           </div>
         </div>
-        <img
-          src={mountain_central}
-          ref={mountain_central_parallax}
-          className="first_landscape_mountain_central"
-          alt="mountain"
+        <ParallaxImage
+          classInfo="first_landscape_mountain_central"
+          image={mountain_central}
+          translateY={1.5}
+          translateX={0}
         />
         <h1 className="title" ref={title_parallax}>
           Florian Jourdain
         </h1>
 
-        <img
-          src={mountain_left_and_right}
-          ref={mountain_left_and_right_parallax}
-          className="first_landscape_mountain_left_and_right"
-          alt="mountains"
+        <ParallaxImage
+          classInfo="first_landscape_mountain_left_and_right"
+          image={mountain_left_and_right}
+          translateY={1.2}
+          translateX={0}
         />
-        <img
-          src={three_back}
-          ref={three_back_parallax}
-          className="first_landscape_three_back"
-          alt="threes"
+        <ParallaxImage
+          classInfo="first_landscape_tree_back"
+          image={tree_back}
+          translateY={0.8}
+          translateX={0}
         />
-        <img
-          src={three_side}
-          ref={three_side_parallax}
-          className="first_landscape_three_side"
-          alt="threes"
+
+        <ParallaxImage
+          classInfo="first_landscape_tree_side"
+          image={tree_side}
+          translateY={0.5}
+          translateX={0}
         />
-        <img
-          src={grass}
-          ref={grass_parallax}
-          className="first_landscape_grass"
-          alt="grass"
+        <ParallaxImage
+          classInfo="first_landscape_grass"
+          image={grass}
+          translateY={0.7}
+          translateX={0}
         />
-        <img
-          src={three_first}
-          ref={three_first_parallax}
-          className="first_landscape_three_first"
-          alt="threes"
+        <ParallaxImage
+          classInfo="first_landscape_tree_first"
+          image={tree_first}
+          translateY={0.3}
+          translateX={0}
         />
       </div>
       <div className="next_content" ref={second_section}>
