@@ -12,7 +12,7 @@
 
 .explanation {
   color: #dfdbdb;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .year_one_title,
@@ -23,10 +23,14 @@
 }
 
 .year_one,
-.year_two {
+.year_two,
+.year_three {
   display: flex;
   flex-direction: column;
   color: #dfdbdb;
+}
+.year_three {
+  margin-bottom: 2rem;
 }
 
 .card__area {
