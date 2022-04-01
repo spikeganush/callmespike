@@ -22,6 +22,19 @@
   font-size: 3rem;
 }
 
+@media screen and (max-width: 650px) {
+  .explanation {
+    font-size: 1em;
+  }
+
+  .year_one_title,
+  .year_two_title,
+  .year_three_title {
+    color: #dfdbdb;
+    font-size: 2rem;
+  }
+}
+
 .year_one,
 .year_two,
 .year_three {

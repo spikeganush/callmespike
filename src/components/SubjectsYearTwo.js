@@ -15,7 +15,7 @@ function SubjectsYearTwo() {
               </div>
               <div className="subjects_area">
                 <div className="card__class">
-                  <h2 className="card__title">Ait dvd Library</h2>
+                  <h2 className="card__title">Dvd Library</h2>
                   <h2 className="card__team">Semester</h2>
                   <div className="note">
                     <sup>85</sup>
