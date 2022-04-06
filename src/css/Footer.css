@@ -13,12 +13,12 @@
 
 @media screen and (max-width: 650px) {
   .footer {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 }
 
 @media screen and (max-width: 350px) {
   .footer {
-    font-size: 0.8em;
+    font-size: 0.6em;
   }
 }
