@@ -22,19 +22,6 @@
   font-size: 3rem;
 }
 
-@media screen and (max-width: 650px) {
-  .explanation {
-    font-size: 1em;
-  }
-
-  .year_one_title,
-  .year_two_title,
-  .year_three_title {
-    color: #dfdbdb;
-    font-size: 2rem;
-  }
-}
-
 .year_one,
 .year_two,
 .year_three {
@@ -102,6 +89,23 @@
   place-self: center;
   grid-area: Title;
 }
+
+@media screen and (max-width: 650px) {
+  .explanation {
+    font-size: 1em;
+  }
+
+  .year_one_title,
+  .year_two_title,
+  .year_three_title {
+    font-size: 2rem;
+  }
+
+  .card__title {
+    font-size: 1.8rem;
+  }
+}
+
 .card__team {
   margin-top: 0;
   margin-bottom: 0;
