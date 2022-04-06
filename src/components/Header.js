@@ -164,12 +164,12 @@ function Header() {
       </div>
       <div className="next_content" ref={second_section}>
         <p>
-          As you can see my name is Florian Jourdain. Born in France in 1984 and
-          moved in Australia end of 2018.
+          As you can see, my name is Florian Jourdain. Born in France in 1984
+          and moved to Australia end of 2018.
         </p>
         <p>
-          In April 2019 I've started my journey in the development world with
-          the beginning of my Bachelor degree in Mobile App development in AIT
+          In April 2019, I started my journey in the developing world with the
+          beginning of my Bachelor's degree in Mobile App development at AIT
           (Academy of Information Technology).
         </p>
         <p>

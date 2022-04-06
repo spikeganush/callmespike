@@ -2,7 +2,8 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 
 import Header from './components/Header'
 import Sydney from './components/Sydney'
-import YearOne from './components/YearOne'
+import Subjects from './components/Subjects'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <ParallaxProvider>
         <Header />
         <Sydney />
-        <YearOne />
+        <Subjects />
+        <Footer />
       </ParallaxProvider>
     </div>
   )

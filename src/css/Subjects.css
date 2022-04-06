@@ -1,0 +1,198 @@
+.subjects_container {
+  position: relative;
+  top: -2px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #1c0911;
+  padding-inline: 15px;
+}
+
+.explanation {
+  color: #dfdbdb;
+  font-size: 2rem;
+}
+
+.year_one_title,
+.year_two_title,
+.year_three_title {
+  color: #dfdbdb;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 650px) {
+  .explanation {
+    font-size: 1em;
+  }
+
+  .year_one_title,
+  .year_two_title,
+  .year_three_title {
+    color: #dfdbdb;
+    font-size: 2rem;
+  }
+}
+
+.year_one,
+.year_two,
+.year_three {
+  display: flex;
+  flex-direction: column;
+  color: #dfdbdb;
+}
+.year_three {
+  margin-bottom: 2rem;
+}
+
+.card__area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  column-gap: 1rem;
+}
+
+.year_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+}
+
+.subjects_area {
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card__class {
+  background-color: #dfdbdb;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px #14060c;
+  color: #000;
+  display: grid;
+  grid-row-gap: 0.5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 0.3fr 0.5fr 1fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    'Title Title Title Title Title'
+    'team team team team team'
+    'language1 language2 language3 language4 language5'
+    'description description description description description'
+    'link1 link2 link3 link4 link5';
+  margin-top: 2rem;
+  max-width: 415px;
+  min-width: 300px;
+  padding: 0.8rem;
+}
+
+.note {
+  grid-row: 1/2;
+  grid-column: 5/6;
+  place-self: center;
+  font-size: 1.5rem;
+}
+
+.card__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2rem;
+  place-self: center;
+  grid-area: Title;
+}
+.card__team {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  place-self: center;
+  grid-area: team;
+}
+
+.language1,
+.language2,
+.language3,
+.language4,
+.language5,
+.link1,
+.link2,
+.link3,
+.link4,
+.link5 {
+  place-self: center;
+}
+
+.language1 {
+  grid-area: language1;
+}
+.language2 {
+  grid-area: language2;
+}
+.language3 {
+  grid-area: language3;
+}
+.language4 {
+  grid-area: language4;
+}
+.language5 {
+  grid-area: language5;
+}
+
+.language1 h3,
+.language2 h3,
+.language3 h3,
+.language4 h3,
+.language5 h3 {
+  margin-top: 110px;
+  font-size: 1.2rem;
+}
+
+.description {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  grid-area: description;
+}
+
+.description a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1c0911;
+  border-bottom: 1px solid #1c0911;
+}
+
+.link1 {
+  grid-area: link1;
+}
+
+.link2 {
+  grid-area: link2;
+}
+
+.link3 {
+  grid-area: link3;
+}
+
+.link4 {
+  grid-area: link4;
+}
+
+.link5 {
+  grid-area: link5;
+}
+
+.github g,
+.github path {
+  fill: #1c0911;
+}
+
+.github:hover g,
+.github:hover path,
+.home:hover {
+  cursor: pointer;
+  fill: #2a44d8;
+}
+
+.home {
+  fill: #1c0911;
+}
