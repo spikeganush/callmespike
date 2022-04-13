@@ -21,6 +21,166 @@ img {
   width: 100%;
 }
 
+@keyframes bounceAlpha {
+  0% {
+    opacity: 1;
+    transform: translateX(50%) translateY(-15px) scale(1) rotate(45deg);
+  }
+  25% {
+    opacity: 0;
+    transform: translateX(50%) translateY(-5px) scale(0.9) rotate(45deg);
+  }
+  26% {
+    opacity: 0;
+    transform: translateX(50%) translateY(-15px) scale(0.9) rotate(45deg);
+  }
+  55% {
+    opacity: 1;
+    transform: translateX(50%) translateY(-15px) scale(1) rotate(45deg);
+  }
+}
+
+@keyframes bounceAlpha2 {
+  0% {
+    opacity: 0.6;
+    transform: translateX(50%) translateY(-25px) scale(1) rotate(45deg);
+  }
+  25% {
+    opacity: 0;
+    transform: translateX(50%) translateY(-15px) scale(0.9) rotate(45deg);
+  }
+  26% {
+    opacity: 0;
+    transform: translateX(50%) translateY(-25px) scale(0.9) rotate(45deg);
+  }
+  55% {
+    opacity: 0.6;
+    transform: translateX(50%) translateY(-25px) scale(1) rotate(45deg);
+  }
+}
+
+@keyframes bounceAlpha3 {
+  0% {
+    opacity: 1;
+    transform: translateX(50%) translateY(-15px) scale(1) rotate(45deg);
+  }
+  25% {
+    opacity: 0;
+    transform: translateX(50%) translateY(-25px) scale(0.9) rotate(45deg);
+  }
+  26% {
+    opacity: 0;
+    transform: translateX(50%) translateY(-15px) scale(0.9) rotate(45deg);
+  }
+  55% {
+    opacity: 1;
+    transform: translateX(50%) translateY(-15px) scale(1) rotate(45deg);
+  }
+}
+
+@keyframes bounceAlpha4 {
+  0% {
+    opacity: 0.6;
+    transform: translateX(50%) translateY(-5px) scale(1) rotate(45deg);
+  }
+  25% {
+    opacity: 0;
+    transform: translateX(50%) translateY(-15px) scale(0.9) rotate(45deg);
+  }
+  26% {
+    opacity: 0;
+    transform: translateX(50%) translateY(-5px) scale(0.9) rotate(45deg);
+  }
+  55% {
+    opacity: 0.6;
+    transform: translateX(50%) translateY(-5px) scale(1) rotate(45deg);
+  }
+}
+
+.down_nav {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #903590;
+  z-index: 100;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0px 0px 10px black;
+  cursor: pointer;
+}
+
+.down_nav::after,
+.down_nav::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 3px solid #000;
+  border-right: 3px solid #000;
+  width: 30px;
+  height: 30px;
+}
+
+.down_nav::after {
+  animation-name: bounceAlpha;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform: translateX(50%) translateY(-15px) rotate(45deg);
+}
+
+.down_nav::before {
+  animation-name: bounceAlpha2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 0.6;
+  transform: translateX(50%) translateY(-25px) rotate(45deg);
+}
+
+.up_nav {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #903590;
+  z-index: 100;
+  position: fixed;
+  bottom: 20px;
+  right: 100px;
+  box-shadow: 0px 0px 10px black;
+  cursor: pointer;
+}
+
+.up_nav::after,
+.up_nav::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 3px solid #000;
+  border-left: 3px solid #000;
+  width: 30px;
+  height: 30px;
+}
+
+.up_nav::after {
+  animation-name: bounceAlpha3;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform: translateX(50%) translateY(-15px) rotate(45deg);
+}
+
+.up_nav::before {
+  animation-name: bounceAlpha4;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 0.6;
+  transform: translateX(50%) translateY(-5px) rotate(45deg);
+}
+
 .center_mountain_reference {
   position: absolute;
   display: flex;
@@ -44,7 +204,7 @@ img {
 .plane {
   position: absolute;
   width: 200px;
-  top: -6px;
+  bottom: 510px;
 }
 
 .first_landscape_cloud_top_left {
@@ -79,7 +239,7 @@ img {
   position: absolute;
   display: block;
   width: 62%;
-  top: -95px;
+  bottom: 155px;
   left: 50%;
   margin-left: -31%;
 }
@@ -127,9 +287,9 @@ img {
 .title {
   z-index: 4;
   position: relative;
-  top: -50px;
   color: #fff;
   text-shadow: 0 0 5px black;
+  bottom: 60px;
   margin-bottom: -5px;
   font-family: 'Courgette', cursive;
   font-size: 6em;
@@ -139,7 +299,7 @@ img {
   display: flex;
   position: absolute;
   left: 50%;
-  top: -185px;
+  bottom: 670px;
   margin-left: -1.1%;
 }
 
@@ -211,7 +371,7 @@ p {
   .plane {
     position: absolute;
     width: 150px;
-    top: 0;
+    bottom: 650px;
   }
 
   .first_landscape_cloud_top_left {
@@ -240,21 +400,17 @@ p {
   }
 
   .title {
-    top: -50px;
+    bottom: 50px;
     font-size: 5em;
   }
 
   .wrapper {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top: 340px;
-    margin-left: -1.3%;
+    bottom: 730px;
   }
 
   .first_landscape_mountain_central {
     width: 100%;
-    top: -50px;
+    bottom: 300px;
     left: 0;
     margin-left: 0;
   }
@@ -282,6 +438,25 @@ p {
   }
 }
 
+@media screen and (max-width: 769px) {
+  .plane {
+    bottom: 615px;
+  }
+
+  .title {
+    bottom: 55px;
+    font-size: 3em;
+  }
+
+  .wrapper {
+    bottom: 690px;
+  }
+
+  .first_landscape_mountain_central {
+    bottom: 290px;
+  }
+}
+
 @media screen and (max-width: 650px) {
   p {
     padding-inline: 50px;
@@ -293,33 +468,23 @@ p {
 
 @media screen and (max-width: 430px) {
   .plane {
-    position: absolute;
-    width: 100px;
-    top: 35px;
+    bottom: 310px;
   }
 
   .title {
-    top: -10px;
-    font-size: 3em;
+    bottom: -25px;
+    font-size: 2.5em;
   }
 
   .wrapper {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top: -70px;
-    margin-left: -1.3%;
+    bottom: 390px;
   }
 
   .first_landscape_mountain_central {
-    width: 100%;
-    top: 5px;
-    left: 0;
-    margin-left: 0;
+    bottom: 200px;
   }
 
   .first_landscape_mountain_left_and_right {
-    width: 100%;
     bottom: 110px;
     right: 0;
   }
@@ -349,21 +514,66 @@ p {
   }
 }
 
-@media screen and (max-width: 380px) {
-  .first_landscape_mountain_central {
-    top: 40px;
-  }
-
+/* @media screen and (max-width: 380px) {
   .plane {
-    top: 85px;
+    bottom: 320px;
+    width: 100px;
   }
 
   .title {
-    top: 30px;
-    font-size: 2.5em;
+    bottom: -5px;
+    font-size: 2em;
   }
 
   .wrapper {
-    top: -45px;
+    bottom: 360px;
+  }
+
+  .first_landscape_mountain_central {
+    bottom: 192px;
+  }
+} */
+
+@media screen and (max-width: 320px) {
+  .plane {
+    bottom: 295px;
+    width: 100px;
+  }
+
+  .title {
+    bottom: 90px;
+    font-size: 2em;
+  }
+
+  .wrapper {
+    bottom: 330px;
+  }
+
+  .first_landscape_mountain_central {
+    bottom: 187px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .plane {
+    bottom: 265px;
+    width: 90px;
+  }
+
+  .title {
+    bottom: -25px;
+    font-size: 2em;
+  }
+
+  .wrapper {
+    bottom: 300px;
+  }
+
+  .first_landscape_mountain_central {
+    bottom: 170px;
+  }
+
+  .first_landscape_mountain_left_and_right {
+    bottom: 100px;
   }
 }

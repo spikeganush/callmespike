@@ -32,8 +32,64 @@ function Sydney() {
     translateX,
     translateY,
   }) => {
-    if (windowWidth < 400) {
-      if (offset <= 1200) {
+    if (windowWidth < 325) {
+      if (offset <= 908) {
+        return (
+          <img
+            src={image}
+            className={classInfo}
+            ref={reference}
+            style={{
+              transform: `translateY(${offset * translateY}px)
+             translateX(${offset * translateX}px)`,
+            }}
+            alt="parallax"
+          />
+        )
+      } else {
+        return (
+          <img
+            src={image}
+            className={classInfo}
+            ref={reference}
+            style={{
+              transform: `translateY(${908 * translateY}px)
+               translateX(${908 * translateX}px)`,
+            }}
+            alt="parallax"
+          />
+        )
+      }
+    } else if (windowWidth < 375) {
+      if (offset <= 1071) {
+        return (
+          <img
+            src={image}
+            className={classInfo}
+            ref={reference}
+            style={{
+              transform: `translateY(${offset * translateY}px)
+             translateX(${offset * translateX}px)`,
+            }}
+            alt="parallax"
+          />
+        )
+      } else {
+        return (
+          <img
+            src={image}
+            className={classInfo}
+            ref={reference}
+            style={{
+              transform: `translateY(${1071 * translateY}px)
+               translateX(${1071 * translateX}px)`,
+            }}
+            alt="parallax"
+          />
+        )
+      }
+    } else if (windowWidth < 413) {
+      if (offset <= 1175) {
         return (
           <img
             src={image}
@@ -55,6 +111,62 @@ function Sydney() {
             style={{
               transform: `translateY(${1200 * translateY}px)
                translateX(${1200 * translateX}px)`,
+            }}
+            alt="parallax"
+          />
+        )
+      }
+    } else if (windowWidth < 769) {
+      if (offset <= 1700) {
+        return (
+          <img
+            src={image}
+            className={classInfo}
+            ref={reference}
+            style={{
+              transform: `translateY(${offset * translateY}px)
+             translateX(${offset * translateX}px)`,
+            }}
+            alt="parallax"
+          />
+        )
+      } else {
+        return (
+          <img
+            src={image}
+            className={classInfo}
+            ref={reference}
+            style={{
+              transform: `translateY(${1700 * translateY}px)
+               translateX(${1700 * translateX}px)`,
+            }}
+            alt="parallax"
+          />
+        )
+      }
+    } else if (windowWidth < 821) {
+      if (offset <= 1800) {
+        return (
+          <img
+            src={image}
+            className={classInfo}
+            ref={reference}
+            style={{
+              transform: `translateY(${offset * translateY}px)
+             translateX(${offset * translateX}px)`,
+            }}
+            alt="parallax"
+          />
+        )
+      } else {
+        return (
+          <img
+            src={image}
+            className={classInfo}
+            ref={reference}
+            style={{
+              transform: `translateY(${1800 * translateY}px)
+               translateX(${1800 * translateX}px)`,
             }}
             alt="parallax"
           />
@@ -94,8 +206,40 @@ function Sydney() {
   useEffect(() => {
     //set the offset of the parallax
     setWindowWidth(window.innerWidth)
-    if (windowWidth < 400) {
-      if (offset <= 1200) {
+    if (windowWidth < 325) {
+      if (offset <= 908) {
+        //title parameters
+        title_parallax.current.style.transform = `translateY(${offset * 1.2}px)`
+        title2_parallax.current.style.transform = `translateY(${
+          offset * 1.2
+        }px)`
+      }
+    } else if (windowWidth < 375) {
+      if (offset <= 1071) {
+        //title parameters
+        title_parallax.current.style.transform = `translateY(${offset * 1.2}px)`
+        title2_parallax.current.style.transform = `translateY(${
+          offset * 1.2
+        }px)`
+      }
+    } else if (windowWidth < 413) {
+      if (offset <= 1175) {
+        //title parameters
+        title_parallax.current.style.transform = `translateY(${offset * 1.2}px)`
+        title2_parallax.current.style.transform = `translateY(${
+          offset * 1.2
+        }px)`
+      }
+    } else if (windowWidth < 769) {
+      if (offset <= 1700) {
+        //title parameters
+        title_parallax.current.style.transform = `translateY(${offset * 1.2}px)`
+        title2_parallax.current.style.transform = `translateY(${
+          offset * 1.2
+        }px)`
+      }
+    } else if (windowWidth < 821) {
+      if (offset <= 1800) {
         //title parameters
         title_parallax.current.style.transform = `translateY(${offset * 1.2}px)`
         title2_parallax.current.style.transform = `translateY(${
@@ -189,7 +333,7 @@ function Sydney() {
         <p className="sydney_area_title2" ref={title2_parallax}>
           Mobile App Development
         </p>
-        <div className="ground"></div>
+        <div className="ground" id="second_step"></div>
       </div>
     </>
   )

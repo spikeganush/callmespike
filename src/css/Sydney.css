@@ -24,29 +24,29 @@
 .plane_sydney {
   position: absolute;
   width: 200px;
-  top: -440px;
+  bottom: 1300px;
   right: -460px;
 }
 
 .sun {
   position: absolute;
   width: 300px;
-  top: 1250px;
+  bottom: -500px;
 }
 
 .dune {
   position: absolute;
-  top: 1100px;
+  bottom: -610px;
 }
 
 .city_back {
   position: absolute;
-  top: 720px;
+  bottom: -120px;
 }
 
 .city_first {
   position: absolute;
-  top: 1120px;
+  bottom: -395px;
 }
 
 .ground {
@@ -61,14 +61,14 @@
   position: absolute;
   width: 700px;
   left: 480px;
-  top: 1775px;
+  bottom: -1145px;
 }
 
 .bridge {
   position: absolute;
   width: 500px;
   right: 380px;
-  top: 3955px;
+  bottom: -3100px;
 }
 
 .kangourou {
@@ -88,8 +88,8 @@
 .ait_logo {
   position: absolute;
   width: 150px;
-  top: -1380px;
-  left: -1360px;
+  bottom: 2340px;
+  left: -70vw;
 }
 
 .sydney_area_title,
@@ -102,6 +102,14 @@
   font-family: 'Courgette', cursive;
 }
 
+.sydney_area_title {
+  bottom: 2290px;
+}
+
+.sydney_area_title2 {
+  bottom: 2220px;
+}
+
 /* Breakpoints */
 /* First breakpoint */
 
@@ -111,50 +119,186 @@
 @media screen and (max-width: 992px) {
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 820px) {
+  .plane_sydney {
+    width: 166px;
+    bottom: 1494px;
+    right: -1463px;
+  }
+
+  .sun {
+    width: 196px;
+    bottom: -935px;
+  }
+
+  .dune {
+    bottom: -950px;
+  }
+
+  .city_back {
+    bottom: -160px;
+  }
+
+  .city_first {
+    bottom: -595px;
+  }
+
+  .ground {
+    height: 130px;
+  }
+
+  .opera {
+    width: 422px;
+    left: 125px;
+    bottom: -1655px;
+  }
+
+  .bridge {
+    width: 309px;
+    right: 55px;
+    bottom: -4360px;
+  }
+
+  .kangourou {
+    width: 140px;
+    bottom: 135px;
+    left: -1801px;
+  }
+
+  .palm {
+    width: 130px;
+    bottom: 135px;
+    right: -1835px;
+  }
+
+  .ait_logo {
+    width: 131px;
+    bottom: 3106px;
+    left: -2131px;
+  }
+
+  .sydney_area_title {
+    left: 70px;
+    font-size: 3em;
+    bottom: 3122px;
+  }
+
+  .sydney_area_title2 {
+    left: 70px;
+    font-size: 3em;
+    bottom: 3060px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .plane_sydney {
+    width: 149px;
+    bottom: 1377px;
+    right: -1391px;
+  }
+
+  .sun {
+    width: 196px;
+    bottom: -920px;
+  }
+
+  .dune {
+    bottom: -920px;
+  }
+
+  .city_back {
+    bottom: -173px;
+  }
+
+  .city_first {
+    bottom: -560px;
+  }
+
+  .ground {
+    height: 130px;
+  }
+
+  .opera {
+    width: 404px;
+    left: 125px;
+    bottom: -1563px;
+  }
+
+  .bridge {
+    width: 268px;
+    right: 55px;
+    bottom: -4113px;
+  }
+
+  .kangourou {
+    width: 140px;
+    bottom: 135px;
+    left: -1700px;
+  }
+
+  .palm {
+    width: 130px;
+    bottom: 135px;
+    right: -1734px;
+  }
+
+  .ait_logo {
+    width: 131px;
+    bottom: 2740px;
+    left: -2018px;
+  }
+
+  .sydney_area_title {
+    left: 70px;
+    font-size: 3em;
+    bottom: 2779px;
+  }
+
+  .sydney_area_title2 {
+    left: 70px;
+    font-size: 3em;
+    bottom: 2667px;
+  }
 }
 
 @media screen and (max-width: 430px) {
   .plane_sydney {
     width: 100px;
-    top: -105px;
-    right: -1050px;
+    bottom: 915px;
+    right: -1048px;
   }
 
   .sun {
     width: 105px;
-    top: 1450px;
+    bottom: -680px;
   }
 
   .dune {
-    top: 1340px;
+    bottom: -640px;
   }
 
   .city_back {
-    top: 825px;
+    bottom: -85px;
   }
 
   .city_first {
-    top: 1113px;
+    bottom: -352px;
   }
 
   .ground {
-    width: 100%;
     height: 130px;
-    background-color: #1c0911;
-    bottom: 0;
   }
 
   .opera {
     width: 245px;
     left: 45px;
-    top: 1795px;
+    bottom: -1066px;
   }
 
   .bridge {
     width: 135px;
-    right: 20px;
-    top: 3685px;
+    right: 19px;
+    bottom: -2865px;
   }
 
   .kangourou {
@@ -171,19 +315,162 @@
 
   .ait_logo {
     width: 95px;
-    top: -1160px;
-    left: -1400px;
+    bottom: 1975px;
+    left: -1422px;
   }
 
   .sydney_area_title {
-    left: 120px;
+    left: 70px;
     font-size: 2em;
-    top: -1225px;
+    bottom: 1953px;
   }
 
   .sydney_area_title2 {
-    left: 120px;
+    left: 70px;
     font-size: 2em;
-    top: -1145px;
+    bottom: 1869px;
   }
+}
+
+@media screen and (max-width: 374px) {
+  .plane_sydney {
+    width: 100px;
+    bottom: 840px;
+    right: -935px;
+  }
+
+  .sun {
+    width: 105px;
+    bottom: -590px;
+  }
+
+  .dune {
+    bottom: -555px;
+  }
+
+  .city_back {
+    bottom: -70px;
+  }
+
+  .city_first {
+    bottom: -305px;
+  }
+
+  .ground {
+    height: 130px;
+  }
+
+  .opera {
+    width: 200px;
+    bottom: -935px;
+  }
+
+  .bridge {
+    width: 135px;
+    right: 20px;
+    bottom: -2542px;
+  }
+
+  .kangourou {
+    width: 55px;
+    bottom: 135px;
+    left: -1070px;
+  }
+
+  .palm {
+    width: 55px;
+    bottom: 135px;
+    right: -1090px;
+  }
+
+  .ait_logo {
+    width: 95px;
+    bottom: 1900px;
+    left: -1275px;
+  }
+
+  .sydney_area_title {
+    left: 70px;
+    font-size: 2em;
+    bottom: 1915px;
+  }
+
+  .sydney_area_title2 {
+    left: 70px;
+    font-size: 2em;
+    bottom: 1835px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .plane_sydney {
+    width: 100px;
+    bottom: 730px;
+    right: -803px;
+  }
+
+  .sun {
+    width: 105px;
+    bottom: -475px;
+  }
+
+  .dune {
+    bottom: -445px;
+  }
+
+  .city_back {
+    bottom: -32px;
+  }
+
+  .city_first {
+    bottom: -235px;
+  }
+
+  .ground {
+    height: 130px;
+  }
+
+  .opera {
+    width: 152px;
+    bottom: -771px;
+  }
+
+  .bridge {
+    width: 135px;
+    right: 20px;
+    bottom: -2134px;
+  }
+
+  .kangourou {
+    width: 55px;
+    bottom: 135px;
+    left: -907px;
+  }
+
+  .palm {
+    width: 55px;
+    bottom: 135px;
+    right: -930px;
+  }
+
+  .ait_logo {
+    width: 95px;
+    bottom: 1547px;
+    left: -1079px;
+  }
+
+  .sydney_area_title {
+    left: 70px;
+    font-size: 2em;
+    bottom: 1525px;
+  }
+
+  .sydney_area_title2 {
+    left: 70px;
+    font-size: 2em;
+    bottom: 1447px;
+  }
+}
+
+@media screen and (max-width: 280px) {
 }
