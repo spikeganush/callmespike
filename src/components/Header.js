@@ -58,6 +58,7 @@ function Header() {
           transform: `translateY(${offset * translateY}px)
            translateX(${offset * translateX}px)`,
         }}
+        alt="parallax"
       />
     )
   }
@@ -83,12 +84,6 @@ function Header() {
     <>
       <div className="first_landscape_background">
         <ParallaxImage
-          classInfo="plane"
-          image={plane}
-          translateY={0.5}
-          translateX={1.5}
-        />
-        <ParallaxImage
           classInfo="first_landscape_cloud_top_left"
           image={cloud_top_left}
           translateY={1}
@@ -112,23 +107,32 @@ function Header() {
           translateY={1}
           translateX={0.8}
         />
-        <div className="wrapper" ref={flag_parallax}>
-          <div className="stick"></div>
-          <div className="flag">
-            <div className="left"></div>
-            <div className="middle"></div>
-            <div className="right"></div>
+
+        <div className="center_mountain_reference">
+          <ParallaxImage
+            classInfo="plane"
+            image={plane}
+            translateY={0.5}
+            translateX={1.5}
+          />
+          <div className="wrapper" ref={flag_parallax}>
+            <div className="stick"></div>
+            <div className="flag">
+              <div className="left"></div>
+              <div className="middle"></div>
+              <div className="right"></div>
+            </div>
           </div>
+          <ParallaxImage
+            classInfo="first_landscape_mountain_central"
+            image={mountain_central}
+            translateY={1.5}
+            translateX={0}
+          />
+          <h1 className="title" ref={title_parallax}>
+            Florian Jourdain
+          </h1>
         </div>
-        <ParallaxImage
-          classInfo="first_landscape_mountain_central"
-          image={mountain_central}
-          translateY={1.5}
-          translateX={0}
-        />
-        <h1 className="title" ref={title_parallax}>
-          Florian Jourdain
-        </h1>
 
         <ParallaxImage
           classInfo="first_landscape_mountain_left_and_right"

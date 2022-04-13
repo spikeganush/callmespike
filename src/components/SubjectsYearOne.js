@@ -111,6 +111,7 @@ function SubjectsYearOne() {
                   <a
                     href="https://github.com/spikeganush/Dead-cells"
                     target="_blank"
+                    rel="noreferrer"
                     className="link2 github"
                   >
                     <svg viewBox="0 0 128 128" width={64} height={64}>
@@ -131,6 +132,7 @@ function SubjectsYearOne() {
                   <a
                     href="https://spikeganush.github.io/Dead-cells/"
                     target="_blank"
+                    rel="noreferrer"
                     class="link4 home"
                   >
                     <svg
@@ -243,6 +245,7 @@ function SubjectsYearOne() {
                   <a
                     href="https://github.com/spikeganush/kaltik"
                     target="_blank"
+                    rel="noreferrer"
                     className="link2 github"
                   >
                     <svg viewBox="0 0 128 128" width={64} height={64}>
@@ -263,6 +266,7 @@ function SubjectsYearOne() {
                   <a
                     href="https://spikeganush.github.io/kaltik/"
                     target="_blank"
+                    rel="noreferrer"
                     class="link4 home"
                   >
                     <svg

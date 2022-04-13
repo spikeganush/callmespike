@@ -271,6 +271,7 @@ function SubjectsYearThree() {
                     <a
                       href="https://au.linkedin.com/in/visanoukan-chalernphon-432575205"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       Visanoukan Chalernphon
                     </a>{' '}
@@ -281,6 +282,7 @@ function SubjectsYearThree() {
                   <a
                     href="https://github.com/spikeganush/ait-course-review2"
                     target="_blank"
+                    rel="noreferrer"
                     className="link2 github"
                   >
                     <svg viewBox="0 0 128 128" width={64} height={64}>
@@ -301,6 +303,7 @@ function SubjectsYearThree() {
                   <a
                     href="https://ait-course-review2.herokuapp.com/"
                     target="_blank"
+                    rel="noreferrer"
                     class="link4 home"
                   >
                     <svg
@@ -372,6 +375,7 @@ function SubjectsYearThree() {
                   <a
                     href="https://github.com/spikeganush/TrickyDex"
                     target="_blank"
+                    rel="noreferrer"
                     className="link2 github"
                   >
                     <svg viewBox="0 0 128 128" width={64} height={64}>
@@ -446,6 +450,7 @@ function SubjectsYearThree() {
                   <a
                     href="https://github.com/spikeganush/trickydex_react-native"
                     target="_blank"
+                    rel="noreferrer"
                     className="link2 github"
                   >
                     <svg viewBox="0 0 128 128" width={64} height={64}>

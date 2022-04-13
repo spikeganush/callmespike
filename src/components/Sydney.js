@@ -6,7 +6,6 @@ import ait_logo from '../assets/general/ait_logo.png'
 function Sydney() {
   const [offset, setOffset] = useState(0)
   const [windowWidth, setWindowWidth] = useState()
-  const [windowHeight, setWindowHeight] = useState()
   let path
   if (windowWidth > 820) {
     path = '../assets/sydney/desktop/'
@@ -44,6 +43,7 @@ function Sydney() {
               transform: `translateY(${offset * translateY}px)
              translateX(${offset * translateX}px)`,
             }}
+            alt="parallax"
           />
         )
       } else {
@@ -56,6 +56,7 @@ function Sydney() {
               transform: `translateY(${1200 * translateY}px)
                translateX(${1200 * translateX}px)`,
             }}
+            alt="parallax"
           />
         )
       }
@@ -70,6 +71,7 @@ function Sydney() {
               transform: `translateY(${offset * translateY}px)
            translateX(${offset * translateX}px)`,
             }}
+            alt="parallax"
           />
         )
       } else {
@@ -82,6 +84,7 @@ function Sydney() {
               transform: `translateY(${1300 * translateY}px)
              translateX(${1300 * translateX}px)`,
             }}
+            alt="parallax"
           />
         )
       }
@@ -91,7 +94,6 @@ function Sydney() {
   useEffect(() => {
     //set the offset of the parallax
     setWindowWidth(window.innerWidth)
-    setWindowHeight(window.innerHeight)
     if (windowWidth < 400) {
       if (offset <= 1200) {
         //title parameters
@@ -116,7 +118,7 @@ function Sydney() {
     // clean up code
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
-  }, [offset])
+  }, [offset, windowWidth])
 
   return (
     <>
