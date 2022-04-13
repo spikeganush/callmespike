@@ -1,3 +1,10 @@
+# Florian Jourdain Portfolio
+
+This project uses React for my portfolio: [https://callmespike.me](https://callmespike.me).
+I'm using some parallax for the beginning of the page ( a real pain to keep it responsive).
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
