@@ -2,23 +2,23 @@ import React, { useEffect, useState, useRef } from 'react'
 //css
 import '../css/Header.css'
 
-//images import
-// import cloud_top_left from '../assets/first_landscape/cloud_top_left.png'
-// import cloud_top_right from '../assets/first_landscape/cloud_top_right.png'
-// import cloud_bottom_left from '../assets/first_landscape/cloud_bottom_left.png'
-// import cloud_bottom_right from '../assets/first_landscape/cloud_bottom_right.png'
-// import mountain_central from '../assets/first_landscape/mountain_central.png'
-// import mountain_left_and_right from '../assets/first_landscape/mountain_left_and_right.png'
-// import tree_back from '../assets/first_landscape/tree_back.png'
-// import tree_side from '../assets/first_landscape/tree_side.png'
-// import grass from '../assets/first_landscape/grass.png'
-// import tree_first from '../assets/first_landscape/tree_first.png'
-// import plane from '../assets/first_landscape/plane.png'
-
 function Header() {
   const [offset, setOffset] = useState(0)
   const [windowWidth, setWindowWidth] = useState()
+  const [downLink, setDownLink] = useState('#first_step')
+  const [upLink, setUpLink] = useState('#beginning')
+  const [countClick, setCountClick] = useState(0)
+  const [screen, setScreen] = useState('')
   let path
+
+  useEffect(() => {
+    if (windowWidth > 820) {
+      setScreen('desktop')
+    } else {
+      setScreen('mobile')
+    }
+  }, [windowWidth])
+
   if (windowWidth > 820) {
     path = '../assets/first_landscape/desktop/'
   } else {
@@ -42,6 +42,33 @@ function Header() {
   const title_parallax = useRef()
   const flag_parallax = useRef()
 
+  useEffect(() => {
+    if (countClick === 0) {
+      setDownLink('#first_step')
+      setUpLink('#beginning')
+    } else if (countClick === 1) {
+      setUpLink('#beginning')
+      setDownLink('#second_step')
+    } else if (countClick === 2) {
+      setUpLink('#first_step')
+      setDownLink('#third_step')
+    } else if (countClick === 3) {
+      setUpLink('#second_step')
+      setDownLink('#fourth_step')
+    } else if (countClick === 4) {
+      setUpLink('#third_step')
+      setDownLink('#fifth_step')
+    } else if (countClick === 5) {
+      setUpLink('#fourth_step')
+      setDownLink('#sixth_step')
+    } else if (countClick === 6) {
+      setUpLink('#fifth_step')
+      setDownLink('#seventh_step')
+    } else if (countClick === 7) {
+      setUpLink('#sixth_step')
+    }
+  }, [countClick])
+
   const ParallaxImage = ({
     image,
     classInfo,
@@ -58,6 +85,7 @@ function Header() {
           transform: `translateY(${offset * translateY}px)
            translateX(${offset * translateX}px)`,
         }}
+        alt="parallax"
       />
     )
   }
@@ -81,13 +109,29 @@ function Header() {
 
   return (
     <>
+      {countClick < 7 && screen === 'desktop' && (
+        <a href={downLink}>
+          <div
+            className="down_nav"
+            onClick={() => {
+              setCountClick(countClick + 1)
+            }}
+          ></div>
+        </a>
+      )}
+
+      {countClick > 0 && screen === 'desktop' && (
+        <a href={upLink}>
+          <div
+            className="up_nav"
+            onClick={() => {
+              setCountClick(countClick - 1)
+            }}
+          ></div>
+        </a>
+      )}
+
       <div className="first_landscape_background">
-        <ParallaxImage
-          classInfo="plane"
-          image={plane}
-          translateY={0.5}
-          translateX={1.5}
-        />
         <ParallaxImage
           classInfo="first_landscape_cloud_top_left"
           image={cloud_top_left}
@@ -111,6 +155,13 @@ function Header() {
           image={cloud_bottom_right}
           translateY={1}
           translateX={0.8}
+        />
+
+        <ParallaxImage
+          classInfo="plane"
+          image={plane}
+          translateY={0.5}
+          translateX={1.5}
         />
         <div className="wrapper" ref={flag_parallax}>
           <div className="stick"></div>
@@ -162,7 +213,7 @@ function Header() {
           translateX={0}
         />
       </div>
-      <div className="next_content" ref={second_section}>
+      <div className="next_content" id="first_step" ref={second_section}>
         <p>
           As you can see, my name is Florian Jourdain. Born in France in 1984
           and moved to Australia end of 2018.
